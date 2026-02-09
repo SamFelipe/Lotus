@@ -99,3 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var cardPix = document.getElementById('card-pix');
+    
+    if (cardPix) {
+        cardPix.addEventListener('click', function() {
+            var areaQr = document.getElementById('area-qrcode');
+            var chavePix = "00020126360014br.gov.bcb.pix0114187162650001565204000053039865802BR5925INSTITUICAO FILANTROPICA 6011NOVA IGUACU62250521hHnEqejaquAtiVj9mbo6I6304ABF0";
+            
+            // Verifica se já tem imagem para não carregar de novo
+            if(areaQr.querySelector('img')) return;
+
+            // Codifica a chave para URL
+            var encodedKey = encodeURIComponent(chavePix);
+            
+            // API que gera o QR Code já com margem branca (margin=20)
+            var qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodedKey}&margin=20`;
+
+            areaQr.innerHTML = `
+                <img src="${qrUrl}" alt="QR Code PIX" style="width: 100%; border-radius: 4px;">
+            `;
+        });
+    }
+});
