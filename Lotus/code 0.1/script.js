@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cardPix) {
         cardPix.addEventListener('click', function() {
             var areaQr = document.getElementById('area-qrcode');
-            var chavePix = "00020126360014br.gov.bcb.pix0114187162650001565204000053039865802BR5925INSTITUICAO FILANTROPICA 6011NOVA IGUACU62250521hHnEqejaquAtiVj9mbo6I6304ABF0";
+            var chavePix = "00020126550014br.gov.bcb.pix0126financeiro@onglotus.org.br0203Pix5204000053039865802BR5925INSTITUICAO FILANTROPICA 6011NOVA IGUACU62290525UXLyynzZZA6JOEiPGBoqmG0JD6304C4B8";
             
             // Verifica se já tem imagem para não carregar de novo
             if(areaQr.querySelector('img')) return;
