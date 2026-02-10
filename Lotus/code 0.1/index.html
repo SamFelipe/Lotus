@@ -202,7 +202,11 @@
                 <div class="contact-wrapper">
                     <div class="contact-box">
                         <h3>Fale Conosco</h3>
-                        <form action="#" method="post">
+                        
+                        <form name="contato" method="POST" data-netlify="true">
+                            
+                            <input type="hidden" name="form-name" value="contato" />
+
                             <div class="form-group">
                                 <label for="contact-name">Nome</label>
                                 <input type="text" id="contact-name" name="name" placeholder="Seu Nome" required>
